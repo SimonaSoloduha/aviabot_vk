@@ -1,8 +1,3 @@
-"""
-Handler - функция, которая принимает на вход text (текст входящего сообщения) и контекст (dict), а возвращает bool:
- True если шаг пройден, False если данные введены неправильно.
-"""
-
 import settings
 import re
 import datetime
@@ -169,40 +164,3 @@ def handler_check_tell(text, context):
 
 def handler_generate_ticket(text, context):
     return generate_ticket(context)
-
-# def list_for_odd_dates(context):
-#     while len(times_to_fly) < 5:
-#         while day_to_fly.day % 2 != 0:
-#             day_to_fly = day_to_fly + delta_day
-#         for time in times:
-#             hour, minute = time.split(':')
-#             time_to_fly = datetime.time(hour=int(hour), minute=int(minute), second=00)
-#             next_flight = datetime.datetime.combine(day_to_fly, time_to_fly)
-#             times_to_fly.append(next_flight)
-#         day_to_fly += delta_day
-#     print(len(times_to_fly), times_to_fly)
-#     context['times_to_fly'] = times_to_fly[:5]
-#
-# def list_for_weekdays(context):
-#     while len(times_to_fly) < 5:
-#         if calendar.weekday(day_to_fly.year, day_to_fly.month, day_to_fly.day) < 5:
-#             for time in times:
-#                 hour, minute = time.split(':')
-#                 time_to_fly = datetime.time(hour=int(hour), minute=int(minute), second=00)
-#                 next_flight = datetime.datetime.combine(day_to_fly, time_to_fly)
-#                 times_to_fly.append(next_flight)
-#         day_to_fly += delta_day
-#     print(len(times_to_fly), times_to_fly)
-#     context['times_to_fly'] = times_to_fly[:5]
-#
-# def list_for_everyday(context):
-#     while len(times_to_fly) < 5:
-#         for time in times:
-#             hour, minute = time.split(':')
-#             print(hour, minute, type(hour))
-#             time_to_fly = datetime.time(hour=int(hour), minute=int(minute), second=00)
-#             next_flight = datetime.datetime.combine(day_to_fly, time_to_fly)
-#             times_to_fly.append(next_flight)
-#         day_to_fly += delta_day
-#     print(len(times_to_fly), times_to_fly)
-#     context['times_to_fly'] = times_to_fly[:5]

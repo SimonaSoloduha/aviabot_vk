@@ -6,7 +6,7 @@ from pony.orm import db_session, rollback
 from vk_api.bot_longpoll import VkBotMessageEvent
 
 from bot import Bot
-from aviabot import settings
+import settings
 from generate_ticket import generate_ticket
 
 
@@ -103,7 +103,6 @@ class Test1(TestCase):
                                                                         '4\n*Комментарий: нет\n\nНапишите "да" или '
                                                                         '"нет"'),
         settings.SCENARIOS['searching']['steps']['step8']['text'],
-        # settings.SCENARIOS['searching']['steps']['step8']['image'],
         settings.SCENARIOS['searching']['steps']['step9']['text']
     ]
 

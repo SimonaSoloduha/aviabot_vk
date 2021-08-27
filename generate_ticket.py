@@ -13,7 +13,6 @@ FROM_OFFSET = (50, 188)
 TO_OFFSET = (50, 255)
 DATA_OFFSET = (290, 255)
 TIME_DEPARTURE = (400, 255)
-# TIME_BOARDING = (400, 320)
 
 
 def generate_ticket(context):
@@ -26,7 +25,6 @@ def generate_ticket(context):
     draw.text(TO_OFFSET, context['to_city'].title(), font=font, fill=BLACK)
     draw.text(DATA_OFFSET, context['selected_flight'][:10], font=font, fill=BLACK)
     draw.text(TIME_DEPARTURE, context['selected_flight'][10:], font=font, fill=BLACK)
-    # draw.text(TIME_BOARDING, context['selected_flight'][:-2], font=font, fill=BLACK)
 
     response = requests.get(url=context['photo_100'])
 
@@ -46,4 +44,3 @@ def generate_ticket(context):
 
 if __name__ == "__main__":
     generate_ticket()
-

@@ -1,5 +1,7 @@
-GROUP_ID = 199292054
-TOKEN = '6862e1be89bf14bc86d9f8889c01752fb7d82bbcc0f2eeeb9a4b48b9973e335331b6918e38a669a425b5e'
+from config import my_token, my_group_id
+TOKEN = my_token
+GROUP_ID = my_group_id
+
 INTENTS = [
     {
         "name": "Справка",
